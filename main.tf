@@ -27,7 +27,11 @@ resource "azurerm_api_management_api" "expressapi" {
      content_value  = "https://raw.githubusercontent.com/dnzbrkyrk/azure-web-app-today/master/Api/azure-web-app-today.swagger.json"
    }
 }
-output "expressapi" {
-  description = "Express API Revision"
-  value       = azurerm_api_management_api.expressapi.revision 
+
+data "azurerm_api_management_api" "expressapi" {
+  name                = "express-api"
+  resource_group_name = "api-management"
+  api_management_name = "azure-api-mgmt"
 }
+
+
