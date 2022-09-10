@@ -18,10 +18,11 @@ resource "azurerm_api_management_api" "expressapi" {
    name                = "express-api"
    resource_group_name = "api-management"
    api_management_name = "azure-api-mgmt"
-   revision            = "3"
+   revision            = "1"
    display_name        = "Express API"
    path                = "express"
    protocols           = ["https"]
+   version.            = "1.0.0"
 
    import {
      content_format = "swagger-link-json"
@@ -40,6 +41,7 @@ data "azurerm_api_management_api" "expressapiexisting" {
   name                = "express-api"
   api_management_name = "azure-api-mgmt"
   resource_group_name = "api-management"
+  revision.           = "1"
 }
 
 output "api_management_api_id" {
