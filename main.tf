@@ -36,7 +36,7 @@ data "azurerm_api_management_api" "expressapi" {
   revision            = "2"
 }
 
-data "azurerm_api_management_api" "expressapi" {
+data "azurerm_api_management_api" "expressapiexisting" {
   name                = "express-api"
   api_management_name = "azure-api-mgmt"
   resource_group_name = "api-management"
