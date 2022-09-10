@@ -27,7 +27,7 @@ describe('sampleUnitTests', function () {
             });
 
             res.on('end', function () {
-                assert.equal(true, data.includes('Hello');
+                assert.equal(true, data.includes('Hello'));
                 done();
             })
         });
