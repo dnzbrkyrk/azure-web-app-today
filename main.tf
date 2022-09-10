@@ -14,7 +14,7 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_api_management_api" "apimanagement" {
+resource "azurerm_api_management_api" "expressapi" {
    name                = "express-api"
    resource_group_name = "api-management"
    api_management_name = "azure-api-mgmt"
@@ -24,7 +24,7 @@ resource "azurerm_api_management_api" "apimanagement" {
    protocols           = ["https"]
 
    import {
-     content_format = "swagger-link-json"
+     content_format = "swagger-json"
      content_value  = "./Api/azure-web-app-today.swagger.json"
    }
 }
