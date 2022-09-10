@@ -23,6 +23,7 @@ resource "azurerm_api_management_api" "expressapi" {
    path                = "express"
    protocols           = ["https"]
    version             = "1.0.0"
+   version_set_id      = "1"
 
    import {
      content_format = "swagger-link-json"
