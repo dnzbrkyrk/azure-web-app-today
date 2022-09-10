@@ -18,6 +18,7 @@ resource "azurerm_api_management_api" "expressapi" {
    name                = "express-api"
    resource_group_name = "api-management"
    api_management_name = "azure-api-mgmt"
+   revision.           = "3"
    display_name        = "Express API"
    path                = "express"
    protocols           = ["https"]
