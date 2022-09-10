@@ -30,5 +30,5 @@ resource "azurerm_api_management_api" "expressapi" {
 }
 output "expressapi" {
   description = "Express API Revision"
-  value       = expressapi.revision 
+  value       = azurerm_api_management_api.expressapi.revision 
 }
