@@ -25,6 +25,6 @@ resource "azurerm_api_management_api" "expressapi" {
 
    import {
      content_format = "swagger-json"
-     content_value  = "./Api/azure-web-app-today.swagger.json"
+     content_value  = "Api/azure-web-app-today.swagger.json"
    }
 }
