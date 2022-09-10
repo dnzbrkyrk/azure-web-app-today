@@ -14,13 +14,13 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_api_management_api" "expressapi" {
-   name                = "express-api"
+resource "azurerm_api_management_api" "azurewebapptodayapi" {
+   name                = "azure-webapp-today-api"
    resource_group_name = "api-management"
    api_management_name = "azure-api-mgmt"
    revision            = "1"
-   display_name        = "Express API"
-   path                = "express"
+   display_name        = "Azure Web App Today API"
+   path                = "azurewebapptodayapi"
    protocols           = ["https"]
    version             = "1.0.0"
    version_set_id      = "1"
