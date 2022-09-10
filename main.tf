@@ -25,6 +25,6 @@ resource "azurerm_api_management_api" "apimanagement" {
 
    import {
      content_format = "swagger-link-json"
-     content_value  = "http://conferenceapi.azurewebsites.net/?format=json"
+     content_value  = "./Api/azure-web-app-today.swagger.json"
    }
 }
