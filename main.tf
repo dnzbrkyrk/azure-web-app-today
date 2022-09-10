@@ -22,8 +22,6 @@ resource "azurerm_api_management_api" "azurewebapptodayapi" {
    display_name        = "Azure Web App Today API"
    path                = "azurewebapptodayapi"
    protocols           = ["https"]
-   version             = "1.0.0"
-   version_set_id      = "1"
 
    import {
      content_format = "swagger-link-json"
