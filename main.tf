@@ -24,7 +24,7 @@ resource "azurerm_api_management_api" "expressapi" {
    protocols           = ["https"]
 
    import {
-     content_format = "swagger-json"
-     content_value  = "Api/azure-web-app-today.swagger.json"
+     content_format = "swagger-link-json"
+     content_value  = "https://raw.githubusercontent.com/dnzbrkyrk/azure-web-app-today/master/Api/azure-web-app-today.swagger.json"
    }
 }
