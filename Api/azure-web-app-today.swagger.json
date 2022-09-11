@@ -42,7 +42,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/greeting"
+                            "$ref": "#/definitions/greetings"
                         },
                         "examples": {
                             "application/json": {}
@@ -53,7 +53,7 @@
         }
     },
     "definitions": {
-        "greeting": {}
+        "greetings": {}
     },
     "tags": []
 }
