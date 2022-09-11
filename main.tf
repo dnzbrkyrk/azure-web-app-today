@@ -22,6 +22,7 @@ resource "azurerm_api_management_api" "azurewebapptodayapi" {
    display_name        = "Azure Web App Today API"
    path                = "azurewebapptodayapi"
    protocols           = ["https"]
+   service_url         = "https://azure-web-app-today.azurewebsites.net"
    subscription_required = false
 
    import {
