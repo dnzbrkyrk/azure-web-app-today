@@ -18,7 +18,7 @@ resource "azurerm_api_management_api" "azurewebapptodayapi" {
    name                = "azure-webapp-today-api"
    resource_group_name = "api-management"
    api_management_name = "azure-api-mgmt"
-   revision            = "1"
+   revision            = var.revision_id
    display_name        = "Azure Web App Today API"
    path                = "azurewebapptodayapi"
    protocols           = ["https"]
