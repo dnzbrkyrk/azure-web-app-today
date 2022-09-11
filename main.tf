@@ -14,17 +14,31 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_api_management_api" "apimanagement" {
-   name                = "express-api"
+resource "azurerm_api_management_api" "azurewebapptodayapi" {
+   name                = "azure-webapp-today-api"
    resource_group_name = "api-management"
-   api_management_name = "api-management"
-   revision            = "2"
-   display_name        = "Express API"
-   path                = "express"
+   api_management_name = "azure-api-mgmt"
+   revision            = "1"
+   display_name        = "Azure Web App Today API"
+   path                = "azurewebapptodayapi"
    protocols           = ["https"]
+   subscription_required = false
 
    import {
      content_format = "swagger-link-json"
-     content_value  = "http://conferenceapi.azurewebsites.net/?format=json"
+     content_value  = "https://raw.githubusercontent.com/dnzbrkyrk/azure-web-app-today/master/Api/azure-web-app-today.swagger.json"
    }
 }
+
+# data "azurerm_api_management_api" "expressapiexisting" {
+#   name                = "express-api"
+#   api_management_name = "azure-api-mgmt"
+#   resource_group_name = "api-management"
+#   revision            = "1"
+# }
+
+# output "api_management_api_id" {
+#   value = data.azurerm_api_management_api.expressapi.id
+# }
+
+
